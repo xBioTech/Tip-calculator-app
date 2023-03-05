@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+
+.bill-form::placeholder {
+    text-align: right;
+}
+
+.bill-form{
+    background-image: url(/tip-calculator-app-main/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 1em 1em;
+    padding: 1em 2em;
+    text-indent: 12.5em;
+    border-radius: 4px;
+    
+}
