@@ -18,3 +18,14 @@
     border-radius: 4px;
     
 }
+
+.tip-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 6em);
+    grid-template-rows: repeat(3, 2em);
+    gap: 1em;
+}
+
+.custombtn{
+    padding-left: 2.6em;
+}
