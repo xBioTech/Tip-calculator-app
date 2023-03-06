@@ -1,9 +1,14 @@
-*{
+body{
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     background-color: hsl(185, 41%, 84%);
 }
 
-
+.main-card{
+    background-color: white;
+    border-radius: 10px;
+}
 
 .bill-form::placeholder {
     text-align: right;
