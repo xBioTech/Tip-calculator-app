@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
 body{
     display: flex;
     justify-content: center;
     box-sizing: border-box;
     background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono';
 }
 
 .main-card{
@@ -48,3 +51,4 @@ body{
     text-indent: 12.5em;
     border-radius: 4px;
 }
+
