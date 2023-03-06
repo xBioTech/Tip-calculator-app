@@ -8,6 +8,7 @@ body{
 .main-card{
     background-color: white;
     border-radius: 10px;
+    padding: 0 4.4em;
 }
 
 .bill-form::placeholder {
@@ -29,8 +30,21 @@ body{
     grid-template-columns: repeat(2, 6em);
     grid-template-rows: repeat(3, 2em);
     gap: 1em;
+    justify-content: center;
 }
 
 .custombtn{
     padding-left: 2.6em;
+}
+
+.people-form::placeholder{
+    text-align: right;
+}
+.people-form{
+    background-image: url(/tip-calculator-app-main/images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 1em 1em;
+    padding: 1em 2em;
+    text-indent: 12.5em;
+    border-radius: 4px;
 }
