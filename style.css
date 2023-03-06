@@ -25,8 +25,12 @@ body{
     padding: 1em 2em;
     text-indent: 12.5em;
     border-radius: 4px;
-    
+    font-weight: 700;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
 }
+
 
 .tip-grid{
     display: grid;
@@ -35,9 +39,22 @@ body{
     gap: 1em;
     justify-content: center;
 }
+.btn{
+   background-color:  hsl(183, 100%, 15%);
+   color: white;
+   cursor: pointer;
+   border-radius: .3em;
+   border: none;
+   font-weight: 700;
+}
+
+.btn:hover{
+    background-color: hsl(172, 67%, 45%);
+}
 
 .custombtn{
     padding-left: 2.6em;
+    color: hsl(183, 100%, 15%);
 }
 
 .people-form::placeholder{
@@ -50,5 +67,11 @@ body{
     padding: 1em 2em;
     text-indent: 12.5em;
     border-radius: 4px;
+    font-weight: 700;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
 }
-
+.input-para{
+    color: hsl(186, 14%, 43%);
+}
