@@ -82,3 +82,41 @@ img{
 .input-para{
     color: hsl(186, 14%, 43%);
 }
+
+.output{
+    background-color: hsl(183, 100%, 15%);
+    padding: 1em 1em;
+    border-radius: 10px;
+}
+
+.output-card{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.tip-per-person{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-per-person{
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    font-size: .8em;
+    color: hsl(184, 14%, 56%);
+}
+.result{
+    color: hsl(172, 67%, 45%);
+}
+
+.resetbtn{
+    border: none;
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: .2em;
+    padding: .7em 1em;
+}
