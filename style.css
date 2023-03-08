@@ -2,10 +2,17 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono';
+}
+
+img{
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 2em 2em;
 }
 
 .main-card{
@@ -19,7 +26,7 @@ body{
 }
 
 .bill-form{
-    background-image: url(/tip-calculator-app-main/images/icon-dollar.svg);
+    background-image: url(tip-calculator-app-main/images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 1em 1em;
     padding: 1em 2em;
@@ -61,7 +68,7 @@ body{
     text-align: right;
 }
 .people-form{
-    background-image: url(/tip-calculator-app-main/images/icon-person.svg);
+    background-image: url(tip-calculator-app-main/images/icon-person.svg);
     background-repeat: no-repeat;
     background-position: 1em 1em;
     padding: 1em 2em;
