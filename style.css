@@ -150,6 +150,10 @@ span{
     padding: 1em 1em;
 }
 
+.resetbtn:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
 @media only screen and (min-width: 768px){
     .main-card{
         display: flex;
