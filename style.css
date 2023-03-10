@@ -39,6 +39,11 @@ img{
     font-size: 1rem;
 }
 
+.bill-form:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
 
 .tip-grid{
     display: grid;
@@ -68,6 +73,11 @@ img{
     font-size: 1.3rem;
 }
 
+.custombtn:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
 .people-form::placeholder{
     text-align: right;
 }
@@ -83,6 +93,11 @@ img{
     border: none;
     background-color: hsl(189, 41%, 97%);
     color: hsl(183, 100%, 15%);
+}
+
+.people-form:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
 }
 
 .number-of-people{
@@ -162,4 +177,7 @@ span{
         padding: 1em 6.8em;
     }
 
+    .resetbtn{
+        margin: 5em 0;
+    }
 }
