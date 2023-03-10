@@ -30,13 +30,13 @@ img{
     background-repeat: no-repeat;
     background-position: 1em 1em;
     padding: 1em 2em;
-    text-indent: 12.5em;
+    text-align: right;
     border-radius: 4px;
     font-weight: 700;
     border: none;
     background-color: hsl(189, 41%, 97%);
     color: hsl(183, 100%, 15%);
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 
@@ -54,7 +54,7 @@ img{
    border-radius: .3em;
    border: none;
    font-weight: 700;
-   font-size: 1.3em;
+   font-size: 1.3rem;
 }
 
 .btn:hover{
@@ -65,7 +65,7 @@ img{
     padding: 1em 1em;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 .people-form::placeholder{
@@ -76,10 +76,10 @@ img{
     background-repeat: no-repeat;
     background-position: 1em 1em;
     padding: 1em 2em;
-    text-indent: 12.5em;
+    text-align: right;
     border-radius: 4px;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1rem;
     border: none;
     background-color: hsl(189, 41%, 97%);
     color: hsl(183, 100%, 15%);
@@ -115,14 +115,16 @@ img{
     justify-content: space-between;
 }
 
+
 span{
-    font-size: .8em;
+    font-size: .8rem;
     color: hsl(184, 14%, 56%);
 }
 .result{
     color: hsl(172, 67%, 45%);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 700;
+    margin-left: 5em;
 }
 
 .resetbtn{
@@ -131,4 +133,33 @@ span{
     background-color: hsl(172, 67%, 45%);
     border-radius: .4em;
     padding: 1em 1em;
+}
+
+@media only screen and (min-width: 768px){
+    .main-card{
+        display: flex;
+        justify-content: space-between;
+        padding: 2em 2em;
+        margin: 0 auto;
+    }
+
+    .output{
+        padding: 2em 3em;
+    }
+
+
+    .tip-grid{
+        grid-template-columns: repeat(3, 8em);
+    grid-template-rows: repeat(2, 3em);
+    margin-right: 2em;
+    }
+
+    .bill-form{
+        padding: 1em 6.8em;
+    }
+
+    .people-form{
+        padding: 1em 6.8em;
+    }
+
 }
