@@ -13,6 +13,12 @@ tipPercentageButton.forEach((btn) =>{
     });
 });
 
+tipPercentageCustom.addEventListener("input", ()=> {
+    userTip = tipPercentageCustom.value;
+    const calcResult = calcBill(+bill.value, userTip);
+    console.log(calcResult);
+});
+
 function calcBill(num1, num2){
    return num1 * num2 / 100;
 }
