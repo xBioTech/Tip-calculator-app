@@ -4,6 +4,7 @@ const tipPercentageCustom = document.querySelector(".custombtn");
 const amountOfPeople = document.querySelector(".people-form");
 const displayTip = document.querySelector(".tip");
 const displayTotal = document.querySelector(".total");
+const resetButton = document.querySelector(".resetbtn");
 
 let userTip = "";
 let splitTip = "";
@@ -43,4 +44,11 @@ function calcTotalPerPerson(num1, num2){
     return totalPerPersonResult.toFixed(2);
 };
 
+
+resetButton.addEventListener("click", () => {
+    userTip = "";
+    splitTip = "";
+    displayTip.textContent = "$0.00"
+    displayTotal.textContent = "$0.00"
+});
 
