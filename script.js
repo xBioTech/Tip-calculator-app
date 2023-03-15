@@ -13,7 +13,8 @@ tipPercentageButton.forEach((btn) =>{
     btn.addEventListener("click", ()=>{
         userTip = +btn.textContent.replace("%", "");
         const calcResult = calcBill(+bill.value, userTip);
-        splitTip = splitBill(calcResult, +amountOfPeople.value);
+        const amountOfPeopleValue = +amountOfPeople.value || +amountOfPeople.placeholder;
+        splitTip = splitBill(calcResult, amountOfPeopleValue);
         displayTip.textContent = splitTip;
         const totalResult = calcTotalPerPerson(+bill.value, calcResult);
         displayTotal.textContent = totalResult;
@@ -23,7 +24,8 @@ tipPercentageButton.forEach((btn) =>{
 tipPercentageCustom.addEventListener("input", ()=> {
     userTip = tipPercentageCustom.value;
     const calcResult = calcBill(+bill.value, userTip);
-    splitTip = splitBill(calcResult, +amountOfPeople.value);
+    const amountOfPeopleValue = +amountOfPeople.value || +amountOfPeople.placeholder;
+    splitTip = splitBill(calcResult, amountOfPeopleValue);
     displayTip.textContent = splitTip;
     const totalResult = calcTotalPerPerson(+bill.value, calcResult);
     displayTotal.textContent = totalResult;
@@ -40,7 +42,8 @@ function calcBill(num1, num2){
 };
 
 function calcTotalPerPerson(num1, num2){
-    let totalPerPersonResult = (num1 + num2) / +amountOfPeople.value
+    const amountOfPeopleValue = +amountOfPeople.value || amountOfPeople.placeholder;
+    let totalPerPersonResult = (num1 + num2) / amountOfPeopleValue;
     return totalPerPersonResult.toFixed(2);
 };
 
