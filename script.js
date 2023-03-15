@@ -53,5 +53,7 @@ resetButton.addEventListener("click", () => {
     splitTip = "";
     displayTip.textContent = "$0.00"
     displayTotal.textContent = "$0.00"
+    bill.value = bill.placeholder;
+    amountOfPeople.value = amountOfPeople.placeholder;
 });
 
