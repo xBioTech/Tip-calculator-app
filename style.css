@@ -101,8 +101,19 @@ img{
 }
 
 .number-of-people{
-    margin: 2em 0em 2em 0em;
+    margin: 2em 0em 2em 0em; 
 }
+
+.number-of-people-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+    color: red;
+}
+
 
 .input-para{
     color: hsl(186, 14%, 43%);
@@ -183,5 +194,9 @@ span{
 
     .resetbtn{
         margin: 5em 0;
+    }
+
+    .number-of-people-text{
+        margin-right: 2em;
     }
 }

@@ -5,6 +5,7 @@ const amountOfPeople = document.querySelector(".people-form");
 const displayTip = document.querySelector(".tip");
 const displayTotal = document.querySelector(".total");
 const resetButton = document.querySelector(".resetbtn");
+const hiddenMessage = document.querySelector(".hidden");
 
 let userTip = "";
 let splitTip = "";
@@ -55,5 +56,15 @@ resetButton.addEventListener("click", () => {
     displayTotal.textContent = "$0.00"
     bill.value = bill.placeholder;
     amountOfPeople.value = amountOfPeople.placeholder;
+    hiddenMessage.style.display = "none";
 });
 
+
+amountOfPeople.addEventListener("input", () => {
+    const input = +amountOfPeople.value;
+    if(input === 0){
+        hiddenMessage.style.display = "block";
+    } else {
+        hiddenMessage.style.display = "none";
+    }
+});
