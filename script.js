@@ -57,14 +57,22 @@ resetButton.addEventListener("click", () => {
     bill.value = bill.placeholder;
     amountOfPeople.value = amountOfPeople.placeholder;
     hiddenMessage.style.display = "none";
+    amountOfPeople.style.border = "none";
 });
 
 
 amountOfPeople.addEventListener("input", () => {
-    const input = +amountOfPeople.value;
-    if(input === 0){
+    if(+amountOfPeople.value === 0){
         hiddenMessage.style.display = "block";
     } else {
         hiddenMessage.style.display = "none";
+    }
+});
+
+amountOfPeople.addEventListener("input", () => {
+    if(+amountOfPeople.value === 0 || +amountOfPeople.placeholder === 0){
+        amountOfPeople.style.border = "2px solid red";
+    } else {
+        amountOfPeople.style.border = "2px solid hsl(172, 67%, 45%)";
     }
 });
