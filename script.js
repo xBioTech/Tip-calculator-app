@@ -10,25 +10,30 @@ const hiddenMessage = document.querySelector(".hidden");
 let userTip = "";
 let splitTip = "";
 
+bill.addEventListener("input", (e) => {
+    inputValue = e.target.value;
+    parsedValue = parseFloat(inputValue.replace(",", "."));
+});
+
 tipPercentageButton.forEach((btn) =>{
     btn.addEventListener("click", ()=>{
-        userTip = +btn.textContent.replace("%", "");
-        const calcResult = calcBill(+bill.value, userTip);
-        const amountOfPeopleValue = +amountOfPeople.value || +amountOfPeople.placeholder;
+        userTip = parseFloat(btn.textContent.replace("%", ""));
+        const calcResult = calcBill(parseFloat(parsedValue), userTip);
+        const amountOfPeopleValue = parseFloat(amountOfPeople.value) || parseFloat(amountOfPeople.placeholder);
         splitTip = splitBill(calcResult, amountOfPeopleValue);
         displayTip.textContent = splitTip;
-        const totalResult = calcTotalPerPerson(+bill.value, calcResult);
+        const totalResult = calcTotalPerPerson(parseFloat(parsedValue), calcResult);
         displayTotal.textContent = totalResult;
     });
 });
 
 tipPercentageCustom.addEventListener("input", ()=> {
     userTip = tipPercentageCustom.value;
-    const calcResult = calcBill(+bill.value, userTip);
-    const amountOfPeopleValue = +amountOfPeople.value || +amountOfPeople.placeholder;
+    const calcResult = calcBill(parseFloat(parsedValue), userTip);
+    const amountOfPeopleValue = parseFloat(amountOfPeople.value) || parseFloat(amountOfPeople.placeholder);
     splitTip = splitBill(calcResult, amountOfPeopleValue);
     displayTip.textContent = splitTip;
-    const totalResult = calcTotalPerPerson(+bill.value, calcResult);
+    const totalResult = calcTotalPerPerson(parseFloat(parsedValue), calcResult);
     displayTotal.textContent = totalResult;
 });
 
@@ -43,7 +48,7 @@ function calcBill(num1, num2){
 };
 
 function calcTotalPerPerson(num1, num2){
-    const amountOfPeopleValue = +amountOfPeople.value || amountOfPeople.placeholder;
+    const amountOfPeopleValue = parseFloat(amountOfPeople.value) || amountOfPeople.placeholder;
     let totalPerPersonResult = (num1 + num2) / amountOfPeopleValue;
     return totalPerPersonResult.toFixed(2);
 };
@@ -62,7 +67,7 @@ resetButton.addEventListener("click", () => {
 
 
 amountOfPeople.addEventListener("input", () => {
-    if(+amountOfPeople.value === 0){
+    if(parseFloat(amountOfPeople.value) === 0){
         hiddenMessage.style.display = "block";
     } else {
         hiddenMessage.style.display = "none";
@@ -70,7 +75,7 @@ amountOfPeople.addEventListener("input", () => {
 });
 
 amountOfPeople.addEventListener("input", () => {
-    if(+amountOfPeople.value === 0 || +amountOfPeople.placeholder === 0){
+    if(parseFloat(amountOfPeople.value) === 0 || parseFloat(amountOfPeople.placeholder) === 0){
         amountOfPeople.style.border = "2px solid red";
     } else {
         amountOfPeople.style.border = "2px solid hsl(172, 67%, 45%)";
