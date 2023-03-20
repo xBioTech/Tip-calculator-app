@@ -15,6 +15,11 @@ bill.addEventListener("input", (e) => {
     parsedValue = parseFloat(inputValue.replace(",", "."));
 });
 
+tipPercentageCustom.addEventListener("input", (e) => {
+    inputCustom = e.target.value;
+    parsedCustomValue = parseFloat(inputCustom.replace(",", "."));
+});
+
 tipPercentageButton.forEach((btn) =>{
     btn.addEventListener("click", ()=>{
         userTip = parseFloat(btn.textContent.replace("%", ""));
@@ -29,7 +34,7 @@ tipPercentageButton.forEach((btn) =>{
 
 tipPercentageCustom.addEventListener("input", ()=> {
     userTip = tipPercentageCustom.value;
-    const calcResult = calcBill(parseFloat(parsedValue), userTip);
+    const calcResult = calcBill(parseFloat(parsedValue), parsedCustomValue);
     const amountOfPeopleValue = parseFloat(amountOfPeople.value) || parseFloat(amountOfPeople.placeholder);
     splitTip = splitBill(calcResult, amountOfPeopleValue);
     displayTip.textContent = splitTip;
@@ -59,10 +64,11 @@ resetButton.addEventListener("click", () => {
     splitTip = "";
     displayTip.textContent = "$0.00"
     displayTotal.textContent = "$0.00"
-    bill.value = bill.placeholder;
-    amountOfPeople.value = amountOfPeople.placeholder;
+    bill.value = "";
+    amountOfPeople.value = "";
     hiddenMessage.style.display = "none";
     amountOfPeople.style.border = "none";
+    tipPercentageCustom.value = "";
 });
 
 
